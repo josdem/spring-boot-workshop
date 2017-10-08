@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title th:text="#{person.list}" />
+  </head>
+  <body>
+    <div th:each="person : ${persons}">
+      <h3 th:text="${person.nickname}" />
+      <p th:text="${person.email}" />
+      <br/>
+    </div>
+  </body>
+</html>

@@ -42,6 +42,8 @@ class PersonController{
     }
     Person person = new Person(nickname: personCommand.nickname, email: personCommand.email)
     personRepository.save(person)
+    List<Person> persons = personRepository.findAll()
+    modelAndView.addObject('persons', persons)
     modelAndView
   }
 

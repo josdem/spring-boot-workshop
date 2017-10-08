@@ -15,7 +15,7 @@ class Person {
   Long id
   @Column(nullable = false)
   String nickname
-  @Column(nullable = false)
+  @Column(unique=true, nullable = false)
   String email
 
 }
