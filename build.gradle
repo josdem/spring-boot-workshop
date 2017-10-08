@@ -25,5 +25,6 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.codehaus.groovy:groovy')
+  compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
