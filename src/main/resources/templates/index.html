@@ -2,4 +2,17 @@
   <head>
     <title th:text="#{person.create}" />
   </head>
+  <body>
+    <form id="register" th:action="@{/save}" th:object="${personCommand}" method="post">
+      <label for="nickname"><h4 th:text="#{person.nickname}"/></label>
+      <input type="text" name='nickname' th:field="*{nickname}" placeholder="nickname" id='nickname'/>
+      <label th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></label>
+      <br/>
+      <label for="email"><h4 th:text="#{person.email}"/></label>
+      <input type="text" name='email' th:field="*{email}" placeholder="Email" id='email'/>
+      <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
+      <br/><br/>
+      <button id="btn-success" type="submit"><p th:text="#{button.submit}"/></button>
+    </form>
+  </body>
 </html>
