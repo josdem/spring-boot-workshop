@@ -1,15 +1,17 @@
 <html>
   <head>
     <link rel="stylesheet" href="/assets/third-party/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/third-party/font-awesome/font-awesome.less" />
     <title th:text="#{person.create}" />
   </head>
   <body>
+    <nav class="navbar navbar-inverse bg-inverse">
+      <font color="white"><h3 th:text="#{home.title}"/></font>
+    </nav>
     <div class="jumbotron">
       <h1 class="display-3" th:text="#{home.welcome}" />
-      <p class="lead" th:text="#{home.subtitle}" />
-      <hr class="my-4" />
-      <p th:text="#{home.label}" />
+        <p class="lead" th:text="#{home.subtitle}" />
+        <hr class="my-4" />
+        <p th:text="#{home.label}" />
         <a th:href="#{home.repository}" class="btn btn-primary btn-lg" role="button"><p th:text="#{home.learn.more}"/></a>
     </div>
     <form id="register" th:action="@{/save}" th:object="${personCommand}" method="post">
