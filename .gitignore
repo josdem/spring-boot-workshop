@@ -1,3 +1,5 @@
 .gradle
 /build/
 **swp
+src/main/resources/static/
+node_modules/

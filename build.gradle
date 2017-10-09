@@ -10,6 +10,17 @@ buildscript {
 	}
 }
 
+plugins {
+  id 'com.craigburke.bower-installer' version '2.5.1'
+}
+
+bower {
+  installBase = 'src/main/resources/static/assets/third-party'
+  'bootstrap'('3.3.7'){
+    source '**'
+  }
+}
+
 apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 
