@@ -24,6 +24,23 @@ Then execute this command in your terminal.
 spring init --dependencies=web --language=groovy --build=gradle spring-boot-workshop
 ```
 
+
+#### Setup
+
+Create a MySQL database and create an user and password that owns that database, then update the `application.properties` with your credentials
+
+```properties
+spring.datasource.url=jdbc:mysql://localhost/springboot_workshop
+spring.datasource.username=user
+spring.datasource.password=password
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+spring.jpa.generate-ddl=true
+
+spring.messages.basename=i18n/messages
+```
+
+
 #### To Run the Project
 
 ```bash
