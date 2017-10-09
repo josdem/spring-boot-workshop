@@ -38,7 +38,7 @@ class PersonController{
     if (bindingResult.hasErrors()) {
       modelAndView.setViewName('index')
       modelAndView.addObject('personCommand', personCommand)
-      modelAndView
+      return modelAndView
     }
     Person person = new Person(nickname: personCommand.nickname, email: personCommand.email)
     personRepository.save(person)
