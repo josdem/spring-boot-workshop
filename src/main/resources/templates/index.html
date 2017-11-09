@@ -8,14 +8,13 @@
     <font color="white"><h3 th:text="#{home.title}"/></font>
   </nav>
   <div class="jumbotron">
-    <h1 class="display-3" th:text="#{home.welcome}" />
-    <p class="lead" th:text="#{home.subtitle}" />
-    <hr class="my-4" />
-    <p th:text="#{home.label}" />
-    <a th:href="#{home.repository}" class="btn btn-primary btn-lg" role="button"><p th:text="#{home.learn.more}"/></a>
+    <div class="container">
+      <h1 th:text="#{home.welcome}" />
+      <p th:text="#{home.subtitle}" />
+      <a th:href="#{home.repository}" class="btn btn-primary btn-lg" role="button"><p th:text="#{home.learn.more}"/></a>
+    </div>
   </div>
   <div class="container">
-    <h3 th:text="#{home.register}" />
     <form id="register" th:action="@{/save}" th:object="${personCommand}" method="post">
       <div class="form-group">
         <label class="col-sm-2 col-form-label-lg" for="nickname"><h4 th:text="#{person.nickname}"/></label>
