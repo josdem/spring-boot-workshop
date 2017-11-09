@@ -49,7 +49,6 @@ gradle bootRun
 
 #### Read this as Reference
 
-
 * http://josdem.io/techtalk/spring/spring_boot/
 * http://josdem.io/techtalk/spring/spring_boot_thymeleaf/
 * http://josdem.io/techtalk/spring/spring_boot_internationalization/
