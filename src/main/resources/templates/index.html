@@ -17,13 +17,13 @@
   <div class="container">
     <form id="register" th:action="@{/save}" th:object="${personCommand}" method="post">
       <div class="form-group">
-        <label class="col-sm-2 col-form-label-lg" for="nickname"><h4 th:text="#{person.nickname}"/></label>
+        <label class="col-sm-1 col-form-label-lg" for="nickname"><h4 th:text="#{person.nickname}"/></label>
         <input class="form-control form-control-lg" type="text" name='nickname' th:field="*{nickname}" placeholder="nickname" id='nickname'/>
         <label th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></label>
       </div>
       <br/>
       <div class="form-group">
-        <label class="col-sm-2 col-form-label-lg" for="email"><h4 th:text="#{person.email}"/></label>
+        <label class="col-sm-1 col-form-label-lg" for="email"><h4 th:text="#{person.email}"/></label>
         <input class="form-control form-control-lg" type="text" name='email' th:field="*{email}" placeholder="Email" id='email'/>
         <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
       </div>
