@@ -1,41 +1,40 @@
 <html>
-  <head>
-    <title th:text="#{person.create}" />
-    <link rel="stylesheet" th:href="@{/assets/third-party/bootstrap/dist/css/bootstrap.min.css}"/>
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse bg-inverse">
-      <font color="white"><h3 th:text="#{home.title}"/></font>
-    </nav>
-    <div class="jumbotron">
-      <h1 class="display-3" th:text="#{home.welcome}" />
-        <p class="lead" th:text="#{home.subtitle}" />
-        <hr class="my-4" />
-        <p th:text="#{home.label}" />
-        <a th:href="#{home.repository}" class="btn btn-primary btn-lg" role="button"><p th:text="#{home.learn.more}"/></a>
-    </div>
+<head>
+  <title th:text="#{person.create}" />
+  <link rel="stylesheet" th:href="@{/assets/third-party/bootstrap/dist/css/bootstrap.min.css}" />
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <font color="white"><h3 th:text="#{home.title}"/></font>
+  </nav>
+  <div class="jumbotron">
     <div class="container">
-    <h3 th:text="#{home.register}" />
+      <h1 th:text="#{home.welcome}" />
+      <p th:text="#{home.subtitle}" />
+      <a th:href="#{home.repository}" class="btn btn-primary btn-lg" role="button"><p th:text="#{home.learn.more}"/></a>
+    </div>
+  </div>
+  <div class="container">
     <form id="register" th:action="@{/save}" th:object="${personCommand}" method="post">
       <div class="form-group">
-        <label class="col-sm-2 col-form-label col-form-label-lg" for="nickname"><h4 th:text="#{person.nickname}"/></label>
+        <label class="col-sm-1 col-form-label-lg" for="nickname"><h4 th:text="#{person.nickname}"/></label>
         <input class="form-control form-control-lg" type="text" name='nickname' th:field="*{nickname}" placeholder="nickname" id='nickname'/>
         <label th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></label>
       </div>
       <br/>
       <div class="form-group">
-        <label class="col-sm-2 col-form-label col-form-label-lg" for="email"><h4 th:text="#{person.email}"/></label>
+        <label class="col-sm-1 col-form-label-lg" for="email"><h4 th:text="#{person.email}"/></label>
         <input class="form-control form-control-lg" type="text" name='email' th:field="*{email}" placeholder="Email" id='email'/>
         <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
       </div>
       <br/><br/>
       <button class="btn btn-success" id="success" type="submit"><p th:text="#{button.submit}"/></button>
     </form>
-    </div>
-    <footer>
-    <nav class="navbar navbar-inverse bg-inverse">
+  </div>
+  <footer>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
       <a class="navbar-brand" th:href="#{home.repository}"><p th:text="#{home.footer}"/></a>
     </nav>
-    </footer>
-  </body>
+  </footer>
+</body>
 </html>
